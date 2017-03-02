@@ -1,0 +1,222 @@
+#welcome-box-container{
+  position:absolute;
+  top:30%;
+  left:45%;
+  margin-top:-50px;
+  margin-left:-100px;
+  width: 300px;
+  height:flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /*box-shadow: 2px 2px 2px 2px #ccc;*/
+  border-radius: 10px;
+  background: white;
+  z-index:1000;
+  display: block;
+  text-align: center;
+}
+#welcome-box-container #welcome-title{
+  font-size: larger;
+  font-weight: bold;
+}
+
+#description-box-container{
+  position: fixed;
+  bottom:10px;
+  left:10px;
+  width: 320px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height:flex;
+  box-shadow: 2px 2px 2px 2px #ccc;
+  border-radius: 10px;
+  background: white;
+  z-index:1000;
+  display: none;
+  text-align: center;
+}
+#description-box-container #description-title{
+  font-size: larger;
+  font-weight: bold;
+}
+#description-box-container #description-imageUrl{
+  align: center;
+  max-width: 260px;
+}
+
+#cite-box-container{
+  position:absolute;
+  top:40%;
+  left:40%;
+  margin-top:-50px;
+  margin-left:-100px;
+  width: 400px;
+  height:flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*box-shadow: 2px 2px 2px 2px #ccc;*/
+  border-radius: 10px;
+  background: white;
+  z-index:1000;
+  display: none;
+  text-align: center;
+}
+#cite-box-container #citation-title{
+  font-size: larger;
+  font-weight: bold;
+}
+
+#cover{
+  position:fixed;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.6);
+  z-index:5;
+  width:100%;
+  height:100%;
+  display:none;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #3482ff;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #ffffff;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.2em 5.1em;
+  transform-origin: 5.2em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #ffffff;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 5.1em;
+  -webkit-transform-origin: 0px 5.1em;
+  transform-origin: 0px 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* sliding popout for data visualization */
+#data-menu-container {
+    box-shadow:2px 2px 2px 2px #ccc;
+    position: fixed;
+    height: 100%;
+    width: 0;
+    /*right: -10px;*/
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
+    transition: width 1s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.data-menu-title {
+    font-size: larger;
+    font-weight: bold;
+    /*color: #3482ff;*/
+    text-align: center;
+}
+
+.data-menu-image{
+  width: 100%;
+}
+
+.data-menu-description{
+    text-align: center;
+}
+
+.data-menu-source{
+    text-align: center;
+}
+
+/*FROM knockout.css*/
+body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#knockout-status {
+  position: absolute;
+  bottom: 55px;
+  left: 20px;
+  font-size: 24px;
+  color: red;
+  background-color: white;
+}
+#knockout-buttons {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+#knockout-buttons .btn {
+  display: inline-block;
+}
+.label {
+  cursor: inherit !important;
+}
+
+@media (max-width: 850px) {
+  #knockout-buttons {
+    right: null;
+    left: 5px;
+  }
+}

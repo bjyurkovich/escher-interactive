@@ -1,0 +1,100 @@
+<!--
+
+Copyright (C) 2015 The Regents of the University of
+California.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <title>Escher Interactive</title>
+  <!-- Bootstrap dependencies for the menu and buttons -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"/></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.5/cosmo/bootstrap.min.css"/>
+
+  <!-- d3 -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+  <!-- descriptions.js -->
+  <script src="js/descriptions.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/descriptions.css"/>
+
+  <!-- Escher files -->
+  <script src="js/escher-1.3.0.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/builder-1.3.0.css"/>
+
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, height=device-height,
+                                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+
+  <body>
+    <!-- welcome box -->
+    <div id="welcome-box-container">
+      <div id="welcome-title">Setting Up...</div>
+      <div id="welcome-text"></div>
+      <div class="loader">Loading...</div>
+    </div>
+
+    <!-- data menu slides from right side of screen -->
+    <div id="data-menu-container"></div>
+
+    <!-- box that appears when metabolite / reaction is clicked -->
+    <div id="description-box-container">
+      <div id="description-title"></div>
+      <div id="description-name"></div>
+      <a id="description-imageLink" target="_blank"><img id="description-imageUrl"></a>
+      <div id="description-formula"></div>
+      <div id="description-charge"></div>
+      <div>
+        <a id="description-biggUrl" target="_blank"></a>
+          |
+        <a id="description-keggUrl" target="_blank"></a>
+      </div>
+      <i><div id="description-gene-list"></div></i>
+      <span id="description-EC-text"></span><a id="description-EC" target="_blank"></a>
+      <br />
+      <div id="data-button"></div>
+      <button onclick="hide_description_box()" class="btn btn-primary btn-md">hide</button>
+    </div>
+
+    <!-- /box that will appear when button in corner is pressed -->
+    <div id="cite-box-container">
+      <div id="citation-title"></div>
+      <div id="citation-text"></div>
+      <br />
+      <button onclick="hide_cite_box()" class="btn btn-primary btn-md">close</button>
+    </div>
+    <div id="cover"></div>
+
+    <div id="map_container"></div>
+    <div id="knockout-status"></div>
+
+    <!-- /buttons in bottom right corner -->
+    <div id="knockout-buttons">
+      <button id="cite-box-button" class="btn btn-default btn-md">How to cite</button>
+      <a href="/interactive_maps/organisms/rbc/rbc-map.pdf" target="_blank" class="btn btn-default btn-md">
+        High-resolution PDF
+      </a>
+      <a href="http://escher-interactive.ucsd.edu/" target="_blank" class="btn btn-default btn-md">
+          Escher Interactive Home
+      </a>
+      <!-- <a href="http://escher.github.io/" target="_blank" class="btn btn-default btn-md">
+        Escher Home
+      </a> -->
+  </body>
+</html>

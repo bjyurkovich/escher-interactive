@@ -1,0 +1,25 @@
+{
+  "name": "escher-description-editor",
+  "homepage":"http://137.110.115.234/",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "ls-cache": "^0.2.3",
+    "promise": "^7.1.1",
+    "rc-select": "^6.6.8",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-fontawesome": "^1.4.0",
+    "react-router": "^3.0.0",
+    "react-select": "^0.9.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
