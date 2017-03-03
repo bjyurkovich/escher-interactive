@@ -29,7 +29,7 @@ With the primary goal to provide users with the ability to access on-demand info
 ## What's in the Repository
 There are 4 primary folders in the repository:
 
-1. `bigg_api/`:  a RESTful Python webserver (written in Flask) that accesses (BiGG)[bigg.ucsd.edu] for basic information on KeGG, Chebi, and formulas that are used to gather other information from KeGG, PDB, and data sources.
+1. `bigg_api/`:  a RESTful Python webserver (written in Flask) that accesses [BiGG](bigg.ucsd.edu) for basic information on KeGG, Chebi, and formulas that are used to gather other information from KeGG, PDB, and data sources.
 2. `description-populator/`: a frontend web app (written in React) that is focused on presenting an easy-to-use interface for populating an Escher JSON model object with additional information collected using the `bigg_api` implementation.
 3. `interactive_maps/`:  The Escher viewer with an extension that allows for tooltip displays (see (erythrodb.ucsd.edu)[erythrodb.ucsd.edu] for a much nicer implementation!).  Also includes sample populated map files.
 4. `minimal_embedded_map/`: a basic viewer with all the data maps for the demo escher interactive demo page.
@@ -39,7 +39,7 @@ There are 4 primary folders in the repository:
 # Getting started with the demonstration:
 
 You need a few things, first:
-1. Nodejs installed.  You can use (nvm)[https://github.com/creationix/nvm] to install nodejs.
+1. Nodejs installed.  You can use [nvm](https://github.com/creationix/nvm) to install nodejs.
 2. Install npm (this should come with nodejs)
 
 Clone the repo:
