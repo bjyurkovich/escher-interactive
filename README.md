@@ -33,3 +33,87 @@ There are 4 primary folders in the repository:
 2. `description-populator/`: a frontend web app (written in React) that is focused on presenting an easy-to-use interface for populating an Escher JSON model object with additional information collected using the `bigg_api` implementation.
 3. `interactive_maps/`:  The Escher viewer with an extension that allows for tooltip displays (see (erythrodb.ucsd.edu)[erythrodb.ucsd.edu] for a much nicer implementation!).  Also includes sample populated map files.
 4. `minimal_embedded_map/`: a basic viewer with all the data maps for the demo escher interactive demo page.
+
+
+
+# Getting started with the demonstration:
+
+You need a few things, first:
+1. Nodejs installed.  You can use (nvm)[https://github.com/creationix/nvm] to install nodejs.
+2. Install npm (this should come with nodejs)
+
+Clone the repo:
+```bash
+git clone https://github.com/bjyurkovich/escher-interactive.git
+```
+
+Go to the `description-populator` folder and install dependencies:
+```bash
+cd description-populator
+npm install
+```
+
+Then start the dev server:
+```bash
+npm start
+```
+
+Your browser should open with the frontend.  
+
+## BiGG API
+### Getting started
+Install dependencies:
+
+Make sure you have mysql installed (Ubuntu: `sudo apt-get install mysql-server-5.6`)
+
+```bash
+sudo apt-get install libmysqlclient-dev
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Set up MySQL data for PDB mappings:
+```msql
+sudo service mysql start
+mysql -u[username] -p[password] < data/data-model.sql
+```
+
+Depending on your mysql username and password, you will need to specify your database credentials in `configuration/config.py`:
+
+```
+config = {
+	'baseUrl' : 'http://localhost',
+	'port' : 8001,
+	"database":{
+		'username': '[username]',
+		'password':'[password]',
+		'database': 'PdbMapping',
+		'host': 'localhost'
+	}
+}
+
+```
+
+Then load the data into the mysql database:
+```
+python load_data.py
+```
+
+Lastly, start the server:
+```
+python server.py
+```
+
+### Testing
+The code contains 2 integration tests written in py.test in an attempt to glorify half-a$$ed testing.  Therefore, the server must be run when testing:
+
+```bash
+python server
+```
+and in a different terminal, run
+```
+py.test test/reactions.py -s -v
+```
+
+
