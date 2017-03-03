@@ -24,5 +24,12 @@ With the primary goal to provide users with the ability to access on-demand info
 3. **Escher Interactive Model Populator:** The Escher JSON models that are used in the standard Escher viewer and builder do not provide the necessary information to be displayed within the Escher Interactive overlay.  Thus, a simple web tool to take an existing model file and populate it was required.  Since this was a stand-alone interface and tool that would utilize an API to populate the necessary data and output an updated model file, the React framework (javascript) was used because of familiarity.
 4. **Escher Interactive Visual Overlay:** Since Escher was written in javascript, it was quickly decided that a JavaScript library should be employed to provide the necessary overlays to make Escher Interactive.  Since both D3.js and jQuery were existing dependencies of Escher, it was decided to use jQuery based on comfort and experience.
 5. **Visual Escher Interactive Landing Page:**  To make Escher interactive accessible to as many users as possible, a plain website that advertises existing models and maps was needed.  This was also done in React (JavaScript) because of familiarity and speed.
-
 ![alt tag](https://raw.githubusercontent.com/bjyurkovich/escher-interactive/master/ei-architecture-diagram.png)
+
+## What's in the Repository
+There are 4 primary folders in the repository:
+
+1. `bigg_api/`:  a RESTful Python webserver (written in Flask) that accesses (BiGG)[bigg.ucsd.edu] for basic information on KeGG, Chebi, and formulas that are used to gather other information from KeGG, PDB, and data sources.
+2. `description-populator/`: a frontend web app (written in React) that is focused on presenting an easy-to-use interface for populating an Escher JSON model object with additional information collected using the `bigg_api` implementation.
+3. `interactive_maps/`:  The Escher viewer with an extension that allows for tooltip displays (see (erythrodb.ucsd.edu)[erythrodb.ucsd.edu] for a much nicer implementation!).  Also includes sample populated map files.
+4. `minimal_embedded_map/`: a basic viewer with all the data maps for the demo escher interactive demo page.

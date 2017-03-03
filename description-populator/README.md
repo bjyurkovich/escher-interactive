@@ -1,3 +1,27 @@
+# Getting started:
+
+Clone the repo:
+```bash
+git clone https://github.com/bjyurkovich/escher-interactive.git
+```
+
+Go to the `description-populator` folder and install dependencies:
+```bash
+cd description-populator
+npm install
+```
+
+Then start the dev server:
+```bash
+npm start
+```
+
+Your browser should open with the frontend.
+
+
+
+
+# Information about the boilerplate used to bootstrap this app.
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
