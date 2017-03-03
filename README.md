@@ -25,3 +25,4 @@ With the primary goal to provide users with the ability to access on-demand info
 4. **Escher Interactive Visual Overlay:** Since Escher was written in javascript, it was quickly decided that a JavaScript library should be employed to provide the necessary overlays to make Escher Interactive.  Since both D3.js and jQuery were existing dependencies of Escher, it was decided to use jQuery based on comfort and experience.
 5. **Visual Escher Interactive Landing Page:**  To make Escher interactive accessible to as many users as possible, a plain website that advertises existing models and maps was needed.  This was also done in React (JavaScript) because of familiarity and speed.
 
+![alt tag](https://raw.githubusercontent.com/bjyurkovich/escher-interactive/master/ei-architecture-diagram.png
