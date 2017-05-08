@@ -80,7 +80,7 @@ class GetReaction(Resource):
 
 
 		try:
-			# Ugly as f**k
+			# Ugly 
 			description = soup.h4.nextSibling.nextSibling.text
 			formula = soup.h4.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.text
 		except:
